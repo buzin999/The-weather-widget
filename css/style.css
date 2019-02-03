@@ -1,0 +1,131 @@
+:root {
+    --countItem: 4;
+    --weatherItemWidth:130px;
+    --blocksWidth:calc(var(--weatherItemWidth)*var(--countItem));    
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  color: #60606e;
+  background: #fff url(../img/background.jpg) no-repeat;
+  background-size: cover;
+}
+
+section {
+    margin-top: 100px;
+}
+
+.section-header{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.slider-wrapper{
+	position: relative;
+    display: block;
+	width:  var(--blocksWidth);
+	margin: 0 auto;
+    padding: 10px 50px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
+
+.slider-wrapper .block{
+    width: var(--weatherItemWidth);
+    /* height: 180px; */
+    display: block;
+}
+
+.blocks{
+    width: var(--blocksWidth);
+    overflow: hidden;
+}
+
+ ul {    
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all ease 1s;
+   
+} 
+
+.blocks li {
+    display: inline-block;
+    min-height: 1px;
+    text-align: center;
+}
+
+.day {
+    line-height: 22px;
+}
+
+.date, .dayTemp{
+    font-weight: bold;
+	font-size: 16px;
+}
+
+.nightTemp, .weather{
+    color:#4d4a4a;
+}
+
+.nightTemp{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+  
+.cloudiness{
+    height: 70px;
+    
+}
+
+.cloudiness img{
+       width:50px;
+       padding:5px;
+       display: inline-block;
+       height: 100%;
+       vertical-align: middle;
+}
+
+.arrow {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    outline: none;
+} 
+
+.next {
+    right: 1px;
+    background: url(../img/next.svg) center no-repeat;
+    background-size: 70%;
+   
+}
+.next:hover{
+	background: url(../img/next-hover.svg) center no-repeat;
+	background-size: 70%;
+}
+.prev{
+	left: 1px;
+	background: url(../img/prev.svg) center no-repeat;
+    background-size: 70%;
+}
+.prev:hover{
+	background: url(../img/prev-hover.svg) center no-repeat;
+	background-size: 70%;
+}
